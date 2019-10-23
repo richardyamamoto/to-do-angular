@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit } from "@angular/core";
 @Component({
-  selector: 'app-dialogo',
-  templateUrl: './dialogo.component.html',
-  styleUrls: ['./dialogo.component.scss']
+  selector: "app-dialogo",
+  templateUrl: "./dialogo.component.html",
+  styleUrls: ["./dialogo.component.scss"]
 })
 export class DialogoComponent implements OnInit {
+  tarefas = ["TypeScript", "JS", "Node"];
+  inputText = "";
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  addTarefa() {
+    this.tarefas.push(this.inputText);
   }
 
+  removeTarefa() {
+  }
 }

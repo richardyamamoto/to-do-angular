@@ -4,7 +4,15 @@ import {DialogoComponent} from '../app/dialogo/dialogo.component'
 
 
 const routes: Routes = [
-  { path: '', component: DialogoComponent }
+  {
+    path:'dialogo',
+    component: DialogoComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'dialogo',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

@@ -1,1 +1,18 @@
-<button mat-button>Click me!</button>
+<div class="container">
+  <div>
+    <p>To-do</p>
+  </div>
+  <div>
+    <ul *ngFor="let item of tarefas">
+      <li>
+        <input type="checkbox">
+        {{ item }}
+        <button type="button" (click) = "removeTarefa()">x</button>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <input type="text" [(ngModel)] = "inputText"/>
+    <button type="button" (click)="addTarefa()">+</button>
+  </div>
+</div>

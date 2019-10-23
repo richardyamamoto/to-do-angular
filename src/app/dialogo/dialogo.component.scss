@@ -1,0 +1,14 @@
+* {
+  list-style-type: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  max-width: 650px;
+  justify-content: center;
+}
+
+.container > div:nth-child()
+
+
