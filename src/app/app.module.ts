@@ -1,25 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DialogoComponent } from './dialogo/dialogo.component';
+import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { DialogoComponent } from "./dialogo/dialogo.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import {
   MatButtonModule,
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
-  MatCardModule,
-} from '@angular/material';
+  MatCardModule
+} from "@angular/material";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DialogoComponent,
-  ],
+  declarations: [AppComponent, DialogoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +27,8 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     MatButtonModule,
@@ -41,4 +40,4 @@ import {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

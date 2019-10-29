@@ -1,18 +1,31 @@
 <div class="container">
-  <div>
-    <p>To-do</p>
+  <header>
+    <h1>To-Do</h1>
+  </header>
+  <div class="div-btn">
+    <input
+      type="text"
+      [(ngModel)]="inputText"
+      placeholder="Digite uma tarefa"
+    />
+    <button type="button" (click)="addTarefa()">+</button>
   </div>
-  <div>
-    <ul *ngFor="let item of tarefas">
+  <div class="div-list">
+    <ul *ngFor="let tarefa of tarefas">
       <li>
-        <input type="checkbox">
-        {{ item }}
-        <button type="button" (click) = "removeTarefa()">x</button>
+        <div class="div-list-line">
+          <div>
+            <input type="checkbox" [(ngModel)]="tarefa.situacao"/>
+
+            <p *ngIf="tarefa.situacao">{{tarefa.descricao}}</p>
+
+            <input *ngIf="!tarefa.situacao" type="text" value = {{tarefa.descricao}} >
+          </div>
+          <div>
+            <button type="button" (click)="removeTarefa(tarefa)">x</button>
+          </div>
+        </div>
       </li>
     </ul>
-  </div>
-  <div>
-    <input type="text" [(ngModel)] = "inputText"/>
-    <button type="button" (click)="addTarefa()">+</button>
   </div>
 </div>

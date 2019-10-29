@@ -1,14 +1,111 @@
-* {
-  list-style-type: none;
-}
 .container {
+  margin: 85px auto;
+  max-width: 350px;
+  background: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 1em #999;
+  height: 350px;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 35px;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 10px black;
+}
+
+input {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+.div-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    border: 1px solid transparent;
+    transition: border 0.2s;
+  }
+  input:focus {
+    animation: border 2s;
+    border: 1px solid #7951c1;
+  }
+
+  button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #7951c1;
+    border-radius: 5px;
+    background: #7951c1;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      background: #6e41c0;
+    }
+  }
+}
+button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #7951c1;
+  border-radius: 5px;
+  background: #7951c1;
+  color: #fff;
+}
+
+.div-list {
   display: flex;
   flex-direction: column;
-  background: #eee;
-  max-width: 650px;
-  justify-content: center;
+  text-align: left;
+  list-style: none;
+}
+.div-list-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  input {
+    font-size: 12px;
+    border: 0;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.1);
+
+
+    &:focus {
+      border: 1px solid #7951c1;
+      border-radius: 5px;
+    }
+  }
+  p {
+    display: inline-flex;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 20px;
+    line-height: 26px;
+    text-decoration: line-through;
+  }
 }
 
-.container > div:nth-child()
+.div-list-line > div:nth-child(2) {
+  margin-right: 20px;
 
+  button {
+    background: rgb(255, 125, 125);
+    border: transparent;
 
+    &:hover {
+      cursor: pointer;
+      background: rgb(255, 90, 90);
+    }
+  }
+}
